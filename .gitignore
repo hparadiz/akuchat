@@ -1,0 +1,5 @@
+log/*
+!log/empty
+bin/*.pid
+.DS_Store
+node_modules

@@ -1,0 +1,17 @@
+{
+  "name": "akuchat",
+  "version": "0.0.1",
+  "description": "Encrypted nodejs based ajax chatroom & file transfer system.",
+  "main": "bootstrap.js",
+  "bin": {
+    "akuchat": "bin/akuchat"
+  },
+  "author": "Henry Paradiz <henry.paradiz@gmail.com>",
+  "engines": {
+    "node": "8.4.0"
+  },
+  "dependencies": {
+    "express": "^4.15.4",
+    "socket.io": "^2.0.3"
+  }
+}
