@@ -1,7 +1,14 @@
+@font-face {
+    font-family: "San Francisco";
+    font-weight: 400;
+    src: url("https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-regular-webfont.woff");
+}
+
 body {
     font: 24px Helvetica;
     background: #FFF;
     margin: 0;
+    font-family: "San Francisco", "Segoe Ui", "Helvetica", "Arial"
 }
 
 #frame {
@@ -16,6 +23,10 @@ header{
     display: block;
     min-height: 50px;
     border-bottom: 1px solid rgba(0, 0, 0, .10);
+    text-align: center;
+}
+header div {
+    margin-top: 10px;
 }
 
 #main {
@@ -89,13 +100,33 @@ div.input {
     padding: 0px;
     border-top: 1px solid rgba(0, 0, 0, .10);
     margin: 0px;
-    height: 49px;
+    min-height: 49px;
 }
-div.input textarea {
-    width: 100%;
-    height: 100%;
-    padding: 0px;
+div.input div.input-inner {
+    padding-top: 9px;
+    padding-bottom: 9px;
     margin: 0px;
-    border: none;
-    height: 49px;
+}
+div.input div.input-inner div {
+    -moz-appearance: textfield-multiline;
+    -webkit-appearance: textarea;
+    font-size: 14px;
+    letter-spacing: -0.24px;
+    line-height: 17.92px;
+    padding-left: 15px;
+}
+
+[contenteditable=true]:empty:before {
+    outline: 0px solid transparent;
+    content: attr(placeholder);
+    color: 1px solid rgba(0, 0, 0, .10);
+    display: block; /* For Firefox */
+}
+[contenteditable=true] {
+    max-height: 144px;
+    overflow: scroll;
+    width: 50%;
+}
+[contenteditable]:focus {
+    outline: 0px solid transparent;
 }
