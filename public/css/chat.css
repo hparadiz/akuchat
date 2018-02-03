@@ -107,7 +107,7 @@ div.input div.input-inner {
     padding-bottom: 9px;
     margin: 0px;
 }
-div.input div.input-inner div {
+div.input div.input-inner > div {
     -moz-appearance: textfield-multiline;
     -webkit-appearance: textarea;
     font-size: 14px;
@@ -116,17 +116,20 @@ div.input div.input-inner div {
     padding-left: 15px;
 }
 
-[contenteditable=true]:empty:before {
+#editable:empty:before {
     outline: 0px solid transparent;
     content: attr(placeholder);
     color: 1px solid rgba(0, 0, 0, .10);
     display: block; /* For Firefox */
 }
-[contenteditable=true] {
+#editable {
     max-height: 144px;
     overflow: scroll;
     width: 50%;
 }
-[contenteditable]:focus {
+#editable > div {
+    padding: none;
+}
+#editable:focus {
     outline: 0px solid transparent;
 }
